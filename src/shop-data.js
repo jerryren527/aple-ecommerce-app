@@ -1,0 +1,222 @@
+export const SHOP_DATA = [
+	{
+		title: "phones",
+		items: [
+			{
+				id: "1",
+				imageUrl: "https://picsum.photos/200",
+				name: "iPhone 13 Pro Max",
+				category: "phones",
+				price: 1099,
+				color: "Sierra Blue",
+				storage: "256GB",
+			},
+			{
+				id: "11",
+				imageUrl: "https://picsum.photos/200",
+				name: "iPhone SE",
+				category: "phones",
+				price: 399,
+				color: "Red",
+				storage: "128GB",
+			},
+		],
+	},
+	{
+		title: "tablets",
+		items: [
+			{
+				id: "2",
+				imageUrl: "https://picsum.photos/200",
+				name: "iPad Air (4th Generation)",
+				category: "tablets",
+				price: 599,
+				color: "Rose Gold",
+				storage: "64GB",
+			},
+			{
+				id: "10",
+				imageUrl: "https://picsum.photos/200",
+				name: "iPad Pro (5th Generation)",
+				category: "tablets",
+				price: 1099,
+				color: "Silver",
+				storage: "1TB",
+			},
+		],
+	},
+	{
+		title: "laptops",
+		items: [
+			{
+				id: "3",
+				imageUrl: "https://picsum.photos/200",
+				name: "MacBook Pro (16-inch)",
+				category: "laptops",
+				price: 2399,
+				color: "Space Gray",
+				storage: "512GB",
+			},
+			{
+				id: "13",
+				imageUrl: "https://picsum.photos/200",
+				name: "MacBook Air (M1)",
+				category: "laptops",
+				price: 999,
+				color: "Gold",
+				storage: "256GB",
+			},
+		],
+	},
+	{
+		title: "watches",
+		items: [
+			{
+				id: "4",
+				imageUrl: "https://picsum.photos/200",
+				name: "Apple Watch Series 7",
+				category: "watches",
+				price: 399,
+				color: "Midnight",
+				storage: "16GB",
+			},
+			{
+				id: "15",
+				imageUrl: "https://picsum.photos/200",
+				name: "Apple Watch SE",
+				category: "watches",
+				price: 279,
+				color: "Silver",
+				storage: "32GB",
+			},
+		],
+	},
+
+	{
+		title: "desktops",
+		items: [
+			{
+				id: "6",
+				imageUrl: "https://picsum.photos/200",
+				name: "iMac (24-inch, M1)",
+				category: "desktops",
+				price: 1299,
+				color: "Blue",
+				storage: "256GB",
+			},
+			{
+				id: "9",
+				imageUrl: "https://picsum.photos/200",
+				name: "Mac mini",
+				category: "desktops",
+				price: 699,
+				color: "Silver",
+				storage: "256GB",
+			},
+			{
+				id: "16",
+				imageUrl: "https://picsum.photos/200",
+				name: "iMac Pro",
+				category: "desktops",
+				price: 4999,
+				color: "Space Gray",
+				storage: "1TB",
+			},
+			{
+				id: "18",
+				imageUrl: "https://picsum.photos/200",
+				name: "Mac Pro",
+				category: "desktops",
+				price: 5999,
+				color: "Silver",
+				storage: "256GB",
+			},
+		],
+	},
+
+	{
+		title: "speakers",
+		items: [
+			{
+				id: "7",
+				imageUrl: "https://picsum.photos/200",
+				name: "HomePod Mini",
+				category: "speakers",
+				price: 99,
+				color: "Space Gray",
+				storage: "N/A",
+			},
+		],
+	},
+
+	{
+		title: "accessories",
+		items: [
+			{
+				id: "12",
+				imageUrl: "https://picsum.photos/200",
+				name: "Apple Pencil (2nd Generation)",
+				category: "accessories",
+				price: 129,
+				color: "White",
+				storage: "N/A",
+			},
+			{
+				id: "20",
+				imageUrl: "https://picsum.photos/200",
+				name: "Magic Keyboard",
+				category: "accessories",
+				price: 299,
+				color: "Silver",
+				storage: "N/A",
+			},
+		],
+	},
+	{
+		title: "TVs",
+		items: [
+			{
+				id: "17",
+				imageUrl: "https://picsum.photos/200",
+				name: "Apple TV HD",
+				category: "TVs",
+				price: 149,
+				color: "White",
+				storage: "32GB",
+			},
+			{
+				id: "8",
+				imageUrl: "https://picsum.photos/200",
+				name: "Apple TV 4K",
+				category: "TVs",
+				price: 179,
+				color: "Black",
+				storage: "32GB",
+			},
+		],
+	},
+
+	{
+		title: "headphones",
+		items: [
+			{
+				id: "",
+				imageUrl: "https://picsum.photos/200",
+				name: "AirPods Pro",
+				category: "headphones",
+				price: 249,
+				color: "White",
+				storage: "N/A",
+			},
+			{
+				id: "19",
+				imageUrl: "https://picsum.photos/200",
+				name: "Beats Studio Buds",
+				category: "headphones",
+				price: 149,
+				color: "Black",
+				storage: "N/A",
+			},
+		],
+	},
+];
