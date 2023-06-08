@@ -76,7 +76,7 @@ const Navigation = () => {
 										alignItems: `center`,
 									}}
 								>
-									{currentUser.displayName}
+									{currentUser.email}
 									<KeyboardArrowDown />
 								</Box>
 							</CustomizedLink>

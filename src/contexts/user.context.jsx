@@ -21,6 +21,7 @@ export const UserProvider = ({ children }) => {
 		// onAuthStateChanged() automatically checks the auth state the moment the listener is initialized.
 		const unsubsribe = onAuthStateChangedListener((user) => {
 			// Only create a user document if 'user' is not null (i.e., a user logs in).
+			console.log("user", user);
 			if (user) {
 				createUserDocumentFromAuth(user);
 			}

@@ -122,7 +122,6 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
 };
 
 export const signInAuthUserWithEmailAndPassword = async (email, password) => {
-	console.log("HIT");
 	// protective code.
 	if (!email || !password) return;
 
