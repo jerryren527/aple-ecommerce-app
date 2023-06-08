@@ -9,6 +9,7 @@ const Authentication = () => {
 				display: `flex`,
 				justifyContent: `center`,
 				columnGap: `50px`,
+				marginTop: `50px`,
 			}}
 		>
 			<SignIn />

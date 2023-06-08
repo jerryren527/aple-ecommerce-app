@@ -4,7 +4,7 @@ import {
 	createUserDocumentFromAuth,
 	signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase.utils";
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const defaultFormFields = {
@@ -16,6 +16,11 @@ const SignIn = () => {
 	const navigate = useNavigate();
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { email, password } = formFields;
+
+	const signInWithGoogle = async () => {
+		await signInWithGooglePopup();
+		navigate("/");
+	};
 
 	const handleChange = (event) => {
 		const { name, value } = event.target;
@@ -73,6 +78,7 @@ const SignIn = () => {
 						name="email"
 						onChange={handleChange}
 						value={email}
+						fullWidth
 					/>
 				</Box>
 				<Box>
@@ -84,13 +90,17 @@ const SignIn = () => {
 						name="password"
 						onChange={handleChange}
 						value={password}
+						fullWidth
 					/>
 				</Box>
-				<Box>
+				<Stack direction="row" spacing={2}>
 					<Button variant="contained" type="submit">
 						SIGN IN
 					</Button>
-				</Box>
+					<Button variant="contained" type="button" onClick={signInWithGoogle}>
+						SIGN IN WITH GOOGLE
+					</Button>
+				</Stack>
 			</Box>
 		</div>
 	);

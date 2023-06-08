@@ -5,6 +5,7 @@ import Categories from "./routes/categories/categories.component";
 import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
 import MyButton from "./components/my-button/my-button.component";
+import Settings from "./routes/settings/settings.component";
 
 const Home = () => {
 	return (
@@ -22,6 +23,7 @@ const App = () => {
 				<Route index element={<Categories />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/auth" element={<Authentication />} />
+				<Route path="/settings" element={<Settings />} />
 			</Route>
 		</Routes>
 	);
