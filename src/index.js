@@ -6,6 +6,7 @@ import { CategoriesProvider } from "./contexts/categories.context";
 
 import App from "./App";
 import CssBaseline from "@mui/material/CssBaseline";
+import { UserProvider } from "./contexts/user.context";
 
 // CssBaseline for a global reset, for a consistent look.
 // enableColorScheme allows for switching between 'light' and 'dark' modes of naative compoennts, like scrollbar.
@@ -15,7 +16,9 @@ root.render(
 		<CssBaseline enableColorScheme />
 		<BrowserRouter>
 			<CategoriesProvider>
-				<App />
+				<UserProvider>
+					<App />
+				</UserProvider>
 			</CategoriesProvider>
 		</BrowserRouter>
 	</React.StrictMode>

@@ -120,3 +120,17 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
 
 	return await createUserWithEmailAndPassword(auth, email, password);
 };
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+	console.log("HIT");
+	// protective code.
+	if (!email || !password) return;
+
+	return await signInWithEmailAndPassword(auth, email, password);
+};
+
+export const signOutUser = async () => await signOut(auth);
+
+// Calls firebase's onAuthStateChanged(), which takes in auth object and a custom callback.
+// onAuthStateChanged() creates a Listener object, which has the 'next', 'error', and 'complete' function. Here we provide the callback for the 'next' function, which runs when the listeners detects an event on the stream.
+export const onAuthStateChangedListener = (callback) => onAuthStateChanged(auth, callback);

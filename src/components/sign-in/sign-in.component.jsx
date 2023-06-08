@@ -1,9 +1,47 @@
+import { useState } from "react";
+import {
+	signInWithGooglePopup,
+	createUserDocumentFromAuth,
+	signInAuthUserWithEmailAndPassword,
+} from "../../utils/firebase/firebase.utils";
 import { Box, Button, TextField, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+
+const defaultFormFields = {
+	email: "",
+	password: "",
+};
 
 const SignIn = () => {
-	const handleSubmit = (e) => {
+	const navigate = useNavigate();
+	const [formFields, setFormFields] = useState(defaultFormFields);
+	const { email, password } = formFields;
+
+	const handleChange = (event) => {
+		const { name, value } = event.target;
+		setFormFields({ ...formFields, [name]: value });
+	};
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log("submited");
+
+		try {
+			await signInAuthUserWithEmailAndPassword(email, password);
+			setFormFields(defaultFormFields);
+			navigate("/");
+		} catch (error) {
+			switch (error.code) {
+				case "auth/wrong-password":
+					alert("incorrect password for email");
+					break;
+				case "auth/user-not-found":
+					alert("no user associated with this email");
+					break;
+				default:
+					console.log(error);
+			}
+		}
 	};
 
 	return (
@@ -27,10 +65,26 @@ const SignIn = () => {
 				onSubmit={handleSubmit}
 			>
 				<Box>
-					<TextField type="text" id="email-input" label="Email" variant="outlined" />
+					<TextField
+						type="text"
+						id="email-input"
+						label="Email"
+						variant="outlined"
+						name="email"
+						onChange={handleChange}
+						value={email}
+					/>
 				</Box>
 				<Box>
-					<TextField type="password" id="password-input" label="Password" variant="outlined" />
+					<TextField
+						type="password"
+						id="password-input"
+						label="Password"
+						variant="outlined"
+						name="password"
+						onChange={handleChange}
+						value={password}
+					/>
 				</Box>
 				<Box>
 					<Button variant="contained" type="submit">
