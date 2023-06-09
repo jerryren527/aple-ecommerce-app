@@ -12,24 +12,32 @@ import {
 } from "@mui/material";
 import { useContext } from "react";
 import { CategoriesContext } from "../../contexts/categories.context";
+import ProductCard from "../product-cart/product-card.compoent";
 
 const CategoryPreview = () => {
 	const { categoriesMap } = useContext(CategoriesContext);
 
 	return (
-		<>
+		<Box
+			sx={{
+				padding: `15px`,
+			}}
+		>
 			{categoriesMap &&
 				Object.keys(categoriesMap).map((category) => (
 					<>
-						<Typography variant="h3" component="h2">
-							{category}
-						</Typography>
+						<Box sx={{ textAlign: `center` }}>
+							<Typography variant="h3" component="h2">
+								{category}
+							</Typography>
+						</Box>
 						<Box
 							sx={{
 								display: `flex`,
 								flexWrap: `wrap`,
 								columnGap: `10px`,
-								marginBottom: `20px`,
+								marginBottom: `25px`,
+								justifyContent: `center`,
 							}}
 						>
 							{categoriesMap[category].map((product) => (
@@ -43,35 +51,13 @@ const CategoryPreview = () => {
 										},
 									}}
 								>
-									<Card key={product.id}>
-										<CardMedia component="img" image={product.imageUrl} />
-										<CardContent>
-											<Typography variant="h6" component="p" gutterBottom>
-												{product.name}
-											</Typography>
-											<List>
-												<ListItem>
-													<ListItemText primary={`Price: $${product.price}`} />
-												</ListItem>
-												<ListItem>
-													<ListItemText primary={`Color: ${product.color}`} />
-												</ListItem>
-												<ListItem>
-													<ListItemText primary={`Storage: ${product.storage}`} />
-												</ListItem>
-											</List>
-											<CardActions>
-												<Button>Add To Cart</Button>
-												<Button>Learn More </Button>
-											</CardActions>
-										</CardContent>
-									</Card>
+									<ProductCard product={product} />
 								</Box>
 							))}
 						</Box>
 					</>
 				))}
-		</>
+		</Box>
 	);
 };
 

@@ -7,6 +7,7 @@ import Authentication from "./routes/authentication/authentication.component";
 import MyButton from "./components/my-button/my-button.component";
 import Settings from "./routes/settings/settings.component";
 import Shop from "./routes/shop/shop.component";
+import Cart from "./components/cart/cart.component";
 
 const Home = () => {
 	return (
@@ -26,6 +27,7 @@ const App = () => {
 				<Route path="auth" element={<Authentication />} />
 				<Route path="settings" element={<Settings />} />
 				<Route path="shop/*" element={<Shop />} />
+				<Route path="cart" element={<Cart />} />
 			</Route>
 		</Routes>
 	);

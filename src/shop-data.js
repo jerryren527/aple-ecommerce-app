@@ -3,7 +3,7 @@ export const SHOP_DATA = [
 		title: "phones",
 		items: [
 			{
-				id: "1",
+				id: 1,
 				imageUrl: "https://picsum.photos/200",
 				name: "iPhone 13 Pro Max",
 				category: "phones",
@@ -12,7 +12,7 @@ export const SHOP_DATA = [
 				storage: "256GB",
 			},
 			{
-				id: "11",
+				id: 11,
 				imageUrl: "https://picsum.photos/200",
 				name: "iPhone SE",
 				category: "phones",
@@ -26,7 +26,7 @@ export const SHOP_DATA = [
 		title: "tablets",
 		items: [
 			{
-				id: "2",
+				id: 2,
 				imageUrl: "https://picsum.photos/200",
 				name: "iPad Air (4th Generation)",
 				category: "tablets",
@@ -35,7 +35,7 @@ export const SHOP_DATA = [
 				storage: "64GB",
 			},
 			{
-				id: "10",
+				id: 10,
 				imageUrl: "https://picsum.photos/200",
 				name: "iPad Pro (5th Generation)",
 				category: "tablets",
@@ -49,7 +49,7 @@ export const SHOP_DATA = [
 		title: "laptops",
 		items: [
 			{
-				id: "3",
+				id: 3,
 				imageUrl: "https://picsum.photos/200",
 				name: "MacBook Pro (16-inch)",
 				category: "laptops",
@@ -58,7 +58,7 @@ export const SHOP_DATA = [
 				storage: "512GB",
 			},
 			{
-				id: "13",
+				id: 13,
 				imageUrl: "https://picsum.photos/200",
 				name: "MacBook Air (M1)",
 				category: "laptops",
@@ -72,7 +72,7 @@ export const SHOP_DATA = [
 		title: "watches",
 		items: [
 			{
-				id: "4",
+				id: 4,
 				imageUrl: "https://picsum.photos/200",
 				name: "Apple Watch Series 7",
 				category: "watches",
@@ -81,7 +81,7 @@ export const SHOP_DATA = [
 				storage: "16GB",
 			},
 			{
-				id: "15",
+				id: 15,
 				imageUrl: "https://picsum.photos/200",
 				name: "Apple Watch SE",
 				category: "watches",
@@ -96,7 +96,7 @@ export const SHOP_DATA = [
 		title: "desktops",
 		items: [
 			{
-				id: "6",
+				id: 6,
 				imageUrl: "https://picsum.photos/200",
 				name: "iMac (24-inch, M1)",
 				category: "desktops",
@@ -105,7 +105,7 @@ export const SHOP_DATA = [
 				storage: "256GB",
 			},
 			{
-				id: "9",
+				id: 9,
 				imageUrl: "https://picsum.photos/200",
 				name: "Mac mini",
 				category: "desktops",
@@ -114,7 +114,7 @@ export const SHOP_DATA = [
 				storage: "256GB",
 			},
 			{
-				id: "16",
+				id: 16,
 				imageUrl: "https://picsum.photos/200",
 				name: "iMac Pro",
 				category: "desktops",
@@ -123,7 +123,7 @@ export const SHOP_DATA = [
 				storage: "1TB",
 			},
 			{
-				id: "18",
+				id: 18,
 				imageUrl: "https://picsum.photos/200",
 				name: "Mac Pro",
 				category: "desktops",
@@ -138,7 +138,7 @@ export const SHOP_DATA = [
 		title: "speakers",
 		items: [
 			{
-				id: "7",
+				id: 7,
 				imageUrl: "https://picsum.photos/200",
 				name: "HomePod Mini",
 				category: "speakers",
@@ -153,7 +153,7 @@ export const SHOP_DATA = [
 		title: "accessories",
 		items: [
 			{
-				id: "12",
+				id: 12,
 				imageUrl: "https://picsum.photos/200",
 				name: "Apple Pencil (2nd Generation)",
 				category: "accessories",
@@ -162,7 +162,7 @@ export const SHOP_DATA = [
 				storage: "N/A",
 			},
 			{
-				id: "20",
+				id: 20,
 				imageUrl: "https://picsum.photos/200",
 				name: "Magic Keyboard",
 				category: "accessories",
@@ -176,7 +176,7 @@ export const SHOP_DATA = [
 		title: "TVs",
 		items: [
 			{
-				id: "17",
+				id: 17,
 				imageUrl: "https://picsum.photos/200",
 				name: "Apple TV HD",
 				category: "TVs",
@@ -185,7 +185,7 @@ export const SHOP_DATA = [
 				storage: "32GB",
 			},
 			{
-				id: "8",
+				id: 8,
 				imageUrl: "https://picsum.photos/200",
 				name: "Apple TV 4K",
 				category: "TVs",
@@ -200,7 +200,7 @@ export const SHOP_DATA = [
 		title: "headphones",
 		items: [
 			{
-				id: "",
+				id: 5,
 				imageUrl: "https://picsum.photos/200",
 				name: "AirPods Pro",
 				category: "headphones",
@@ -209,7 +209,7 @@ export const SHOP_DATA = [
 				storage: "N/A",
 			},
 			{
-				id: "19",
+				id: 19,
 				imageUrl: "https://picsum.photos/200",
 				name: "Beats Studio Buds",
 				category: "headphones",

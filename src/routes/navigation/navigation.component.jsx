@@ -1,11 +1,12 @@
 import { Outlet } from "react-router";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../contexts/user.context";
-import { AppBar, Box, Button, IconButton, Menu, MenuItem, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, Box, Button, IconButton, Menu, MenuItem, Stack, Toolbar, Typography } from "@mui/material";
 import { useContext, useState } from "react";
-import { Apple, CatchingPokemon, KeyboardArrowDown } from "@mui/icons-material";
+import { Apple, CatchingPokemon, KeyboardArrowDown, ShoppingBag } from "@mui/icons-material";
 import styled from "@emotion/styled";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { CartContext } from "../../contexts/cart.context";
 
 const MENU_ITEMS = {
 	SETTINGS: "SETTINGS",
@@ -22,6 +23,7 @@ const Navigation = () => {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const open = Boolean(anchorEl);
 	const { currentUser } = useContext(UserContext);
+	const { cartCount } = useContext(CartContext);
 
 	const handleClick = (e) => {
 		setAnchorEl(e.currentTarget); // set the CustomizedLink element as the current element
@@ -58,16 +60,24 @@ const Navigation = () => {
 						</IconButton>
 					</CustomizedLink>
 					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-						APPLE STORE
+						APLE
 					</Typography>
 					<Stack direction="row" spacing={2}>
 						<CustomizedLink to="/">HOME</CustomizedLink>
 						<CustomizedLink to="/shop">SHOP</CustomizedLink>
+						<CustomizedLink to="/cart">
+							<Box sx={{ display: `flex`, alignItems: `center` }}>
+								CART
+								<Badge badgeContent={cartCount} color="secondary">
+									<ShoppingBag />
+								</Badge>
+							</Box>
+						</CustomizedLink>
 						{currentUser ? (
 							<CustomizedLink
 								id="user__button"
 								onClick={handleClick}
-								aria-control={open ? "user__menu" : undefined}
+								aria-controls={open ? "user__menu" : undefined}
 								aria-haspopup="true"
 								aria-expanded={open ? "true" : undefined}
 							>

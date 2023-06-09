@@ -14,6 +14,7 @@ import {
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CategoriesContext } from "../../contexts/categories.context";
+import ProductCard from "../product-cart/product-card.compoent";
 
 const Category = () => {
 	const { category } = useParams(); // use useParams() hook to access url parameters
@@ -25,12 +26,13 @@ const Category = () => {
 	}, [category, categoriesMap]);
 
 	return (
-		<Box p={10}>
+		<Box p={2.5}>
 			<Typography variant="h3">{category}</Typography>
-			<Stack direction="row" spacing={2}>
+			<Stack direction="row" sx={{ flexWrap: `wrap`, gap: `15px`, justifyContent: `center` }}>
 				{products &&
 					products.map((product) => (
 						<Box
+							key={product.id}
 							sx={{
 								height: `auto`,
 								minWidth: {
@@ -40,29 +42,7 @@ const Category = () => {
 								},
 							}}
 						>
-							<Card key={product.id}>
-								<CardMedia component="img" image={product.imageUrl} />
-								<CardContent>
-									<Typography variant="h6" component="p" gutterBottom>
-										{product.name}
-									</Typography>
-									<List>
-										<ListItem>
-											<ListItemText primary={`Price: $${product.price}`} />
-										</ListItem>
-										<ListItem>
-											<ListItemText primary={`Color: ${product.color}`} />
-										</ListItem>
-										<ListItem>
-											<ListItemText primary={`Storage: ${product.storage}`} />
-										</ListItem>
-									</List>
-									<CardActions>
-										<Button>Add To Cart</Button>
-										<Button>Learn More </Button>
-									</CardActions>
-								</CardContent>
-							</Card>
+							<ProductCard product={product} />
 						</Box>
 					))}
 			</Stack>

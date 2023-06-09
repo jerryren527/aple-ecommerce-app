@@ -58,13 +58,6 @@ const Categories = () => {
 					</Grid>
 				))}
 			</Grid>
-
-			{categoriesMap &&
-				Object.keys(categoriesMap).map((category) => (
-					<>
-						<Category category={category} categoryProducts={categoriesMap[category]} />
-					</>
-				))}
 		</Box>
 	);
 };
