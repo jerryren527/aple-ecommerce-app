@@ -6,6 +6,7 @@ import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
 import MyButton from "./components/my-button/my-button.component";
 import Settings from "./routes/settings/settings.component";
+import Shop from "./routes/shop/shop.component";
 
 const Home = () => {
 	return (
@@ -21,9 +22,10 @@ const App = () => {
 		<Routes>
 			<Route path="/" element={<Navigation />}>
 				<Route index element={<Categories />} />
-				<Route path="/home" element={<Home />} />
-				<Route path="/auth" element={<Authentication />} />
-				<Route path="/settings" element={<Settings />} />
+				<Route path="home" element={<Home />} />
+				<Route path="auth" element={<Authentication />} />
+				<Route path="settings" element={<Settings />} />
+				<Route path="shop/*" element={<Shop />} />
 			</Route>
 		</Routes>
 	);

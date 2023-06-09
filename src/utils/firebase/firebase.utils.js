@@ -4,6 +4,7 @@ import {
 	getAuth,
 	signInWithPopup,
 	GoogleAuthProvider,
+	// EmailAuthProvider,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
 	signOut,
@@ -23,6 +24,9 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+
+// Added email auth provider
+// export const getNewEmailCredentials = (email, password) => EmailAuthProvider.credential(email, password);
 
 const provider = new GoogleAuthProvider();
 provider.setCustomParameters({

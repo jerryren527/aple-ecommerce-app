@@ -12,7 +12,7 @@ const MENU_ITEMS = {
 	SIGN_OUT: "SIGN OUT",
 };
 
-const CustomizedLink = styled(Link)`
+export const CustomizedLink = styled(Link)`
 	text-decoration: none;
 	color: #fff;
 `;
@@ -62,6 +62,7 @@ const Navigation = () => {
 					</Typography>
 					<Stack direction="row" spacing={2}>
 						<CustomizedLink to="/">HOME</CustomizedLink>
+						<CustomizedLink to="/shop">SHOP</CustomizedLink>
 						{currentUser ? (
 							<CustomizedLink
 								id="user__button"
