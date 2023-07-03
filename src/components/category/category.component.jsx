@@ -1,14 +1,6 @@
 import {
 	Box,
-	Button,
-	Card,
-	CardActions,
-	CardContent,
-	CardMedia,
-	List,
-	ListItem,
-	ListItemText,
-	Stack,
+	Grid,
 	Typography,
 } from "@mui/material";
 import { useContext, useEffect, useState } from "react";
@@ -28,24 +20,14 @@ const Category = () => {
 	return (
 		<Box p={2.5}>
 			<Typography variant="h3">{category}</Typography>
-			<Stack direction="row" sx={{ flexWrap: `wrap`, gap: `15px`, justifyContent: `center` }}>
+			<Grid container spacing={{ xs: 1, sm: 2, md: 3 }} p={{ xs: 1, sm: 2, md: 3 }}>
 				{products &&
-					products.map((product) => (
-						<Box
-							key={product.id}
-							sx={{
-								height: `auto`,
-								minWidth: {
-									xs: 150,
-									sm: 200,
-									md: 250,
-								},
-							}}
-						>
+					products.map((product, index) => (
+						<Grid item xs={12} sm={6} md={4} lg={3} key={index}>
 							<ProductCard product={product} />
-						</Box>
+						</Grid>
 					))}
-			</Stack>
+			</Grid>
 		</Box>
 	);
 };

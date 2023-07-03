@@ -2,14 +2,8 @@ import { useContext } from "react";
 import { CartContext, addCartItem } from "../../contexts/cart.context";
 import {
 	Box,
-	Paper,
-	Table,
-	TableBody,
 	TableCell,
-	TableContainer,
-	TableHead,
 	TableRow,
-	Typography,
 } from "@mui/material";
 
 import { currencyFormatter } from "../../utils/currency-formatter";
@@ -48,7 +42,7 @@ const CartItem = ({ item }) => {
 				</Box>
 			</TableCell>
 			<TableCell align="center">
-				<img src={`${item.imageUrl}`} />
+				<img src={`${item.imageUrl}`} style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
 			</TableCell>
 		</TableRow>
 	);

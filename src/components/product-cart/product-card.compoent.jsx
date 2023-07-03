@@ -1,5 +1,4 @@
 import {
-	Box,
 	Button,
 	Card,
 	CardActions,
@@ -8,11 +7,27 @@ import {
 	List,
 	ListItem,
 	ListItemText,
-	Stack,
 	Typography,
 } from "@mui/material";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
+import styled from "@emotion/styled";
+
+
+export const StyledCard = styled(Card)(() => ({
+	display: 'flex',
+	flexDirection: 'column',
+	justifyContent: 'center',
+	alignItems: 'center',
+	height: '100%',
+}));
+
+export const StyledImage = styled(CardMedia)({
+	width: '100%',
+	height: '100%',
+	objectFit: 'cover'
+});
+
 
 const ProductCard = ({ product }) => {
 	const { addItemToCart } = useContext(CartContext);
@@ -25,8 +40,11 @@ const ProductCard = ({ product }) => {
 
 	return (
 		<>
-			<Card key={product.id}>
-				<CardMedia component="img" image={product.imageUrl} />
+			<StyledCard key={product.id}>
+				<StyledImage
+					component="img"
+					image={product.imageUrl}
+				/>
 				<CardContent>
 					<Typography variant="h6" component="p" gutterBottom>
 						{product.name}
@@ -44,10 +62,9 @@ const ProductCard = ({ product }) => {
 					</List>
 					<CardActions>
 						<Button onClick={handleClick}>Add To Cart</Button>
-						<Button>Learn More </Button>
 					</CardActions>
 				</CardContent>
-			</Card>
+			</StyledCard>
 		</>
 	);
 };

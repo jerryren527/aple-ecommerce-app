@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 import {
 	Box,
+	Button,
 	Paper,
 	Table,
 	TableBody,
@@ -16,8 +17,12 @@ import { currencyFormatter } from "../../utils/currency-formatter";
 import CartItem from "../cart-item/cart-item.component";
 
 const Cart = () => {
-	const { cartItems, cartTotal } = useContext(CartContext);
+	const { cartItems, cartTotal, clearCart } = useContext(CartContext);
 
+	const handleClick = () => {
+		alert("Thank you for submitting your order!")
+		clearCart();
+	}
 	return (
 		<Box p={2.5}>
 			<h1>CART PAGE</h1>
@@ -45,6 +50,9 @@ const Cart = () => {
 				<Typography variant="h4" component="p">
 					Total: {currencyFormatter.format(cartTotal)}
 				</Typography>
+				<Box>
+					<Button variant="contained" onClick={handleClick}>Submit Order</Button>
+				</Box>
 			</Box>
 		</Box>
 	);

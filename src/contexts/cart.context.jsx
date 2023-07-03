@@ -2,9 +2,9 @@ import { createContext, useState, useEffect } from "react";
 
 export const CartContext = createContext({
 	cartItems: [],
-	addItemToCart: () => {},
-	removeItemFromCart: () => {},
-	clearItemFromCart: () => {},
+	addItemToCart: () => { },
+	removeItemFromCart: () => { },
+	clearItemFromCart: () => { },
 	cartCount: 0,
 	cartTotal: 0,
 });
@@ -32,6 +32,7 @@ export const removeCartItem = (cartItems, productToRemove) => {
 	);
 };
 
+
 export const CartProvider = ({ children }) => {
 	const [cartItems, setCartItems] = useState([]);
 	const [cartCount, setCartCount] = useState(0);
@@ -44,6 +45,10 @@ export const CartProvider = ({ children }) => {
 	const removeItemFromCart = (productToRemove) => {
 		setCartItems(removeCartItem(cartItems, productToRemove));
 	};
+
+	const clearCart = () => {
+		setCartItems([])
+	}
 
 	useEffect(() => {
 		const newCartCount = cartItems.reduce((total, cartItem) => total + cartItem.quantity, 0);
@@ -59,6 +64,7 @@ export const CartProvider = ({ children }) => {
 		cartItems,
 		addItemToCart,
 		removeItemFromCart,
+		clearCart,
 		cartCount,
 		cartTotal,
 	};

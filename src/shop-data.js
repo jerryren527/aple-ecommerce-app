@@ -4,7 +4,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 1,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/feFijXF.jpg",
 				name: "iPhone 13 Pro Max",
 				category: "phones",
 				price: 1099,
@@ -13,7 +13,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 11,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/5SyeaCG.jpg",
 				name: "iPhone SE",
 				category: "phones",
 				price: 399,
@@ -27,7 +27,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 2,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/Ot1EXeQ.jpg",
 				name: "iPad Air (4th Generation)",
 				category: "tablets",
 				price: 599,
@@ -36,7 +36,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 10,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/8N7UlPN.jpg",
 				name: "iPad Pro (5th Generation)",
 				category: "tablets",
 				price: 1099,
@@ -50,7 +50,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 3,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/jPwsSQa.jpg",
 				name: "MacBook Pro (16-inch)",
 				category: "laptops",
 				price: 2399,
@@ -59,7 +59,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 13,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/JiFlkLu.jpg",
 				name: "MacBook Air (M1)",
 				category: "laptops",
 				price: 999,
@@ -73,7 +73,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 4,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/QamOKth.jpg",
 				name: "Apple Watch Series 7",
 				category: "watches",
 				price: 399,
@@ -82,7 +82,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 15,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/3iDH9pq.jpg",
 				name: "Apple Watch SE",
 				category: "watches",
 				price: 279,
@@ -97,7 +97,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 6,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/5tYUtRy.jpg",
 				name: "iMac (24-inch, M1)",
 				category: "desktops",
 				price: 1299,
@@ -106,7 +106,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 9,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/huvXrqq.jpg",
 				name: "Mac mini",
 				category: "desktops",
 				price: 699,
@@ -115,7 +115,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 16,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/pu86PP3.jpg",
 				name: "iMac Pro",
 				category: "desktops",
 				price: 4999,
@@ -124,7 +124,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 18,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/4E5TtdQ.jpg",
 				name: "Mac Pro",
 				category: "desktops",
 				price: 5999,
@@ -139,7 +139,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 7,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/Ir4DaT8.jpg",
 				name: "HomePod Mini",
 				category: "speakers",
 				price: 99,
@@ -154,7 +154,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 12,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/KRgUUn2.jpg",
 				name: "Apple Pencil (2nd Generation)",
 				category: "accessories",
 				price: 129,
@@ -163,7 +163,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 20,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/Bj6un1q.jpg",
 				name: "Magic Keyboard",
 				category: "accessories",
 				price: 299,
@@ -177,7 +177,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 17,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/ER0LSMg.jpg",
 				name: "Apple TV HD",
 				category: "TVs",
 				price: 149,
@@ -186,7 +186,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 8,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/2TzOx75.jpg",
 				name: "Apple TV 4K",
 				category: "TVs",
 				price: 179,
@@ -201,7 +201,7 @@ export const SHOP_DATA = [
 		items: [
 			{
 				id: 5,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/eJIicqK.jpg",
 				name: "AirPods Pro",
 				category: "headphones",
 				price: 249,
@@ -210,7 +210,7 @@ export const SHOP_DATA = [
 			},
 			{
 				id: 19,
-				imageUrl: "https://picsum.photos/200",
+				imageUrl: "https://i.imgur.com/61o9CAE.jpg",
 				name: "Beats Studio Buds",
 				category: "headphones",
 				price: 149,

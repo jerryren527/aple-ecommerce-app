@@ -1,13 +1,6 @@
 import {
 	Box,
-	Button,
-	Card,
-	CardActions,
-	CardContent,
-	CardMedia,
-	List,
-	ListItem,
-	ListItemText,
+	Grid,
 	Typography,
 } from "@mui/material";
 import { useContext } from "react";
@@ -25,7 +18,7 @@ const CategoryPreview = () => {
 		>
 			{categoriesMap &&
 				Object.keys(categoriesMap).map((category) => (
-					<>
+					<Grid container spacing={{ xs: 1, sm: 2, md: 3 }} p={{ xs: 1, sm: 2, md: 3 }}>
 						<Box sx={{ textAlign: `center` }}>
 							<Typography variant="h3" component="h2">
 								{category}
@@ -37,25 +30,16 @@ const CategoryPreview = () => {
 								flexWrap: `wrap`,
 								columnGap: `10px`,
 								marginBottom: `25px`,
-								justifyContent: `center`,
+								justifyContent: `flex-start`,
 							}}
 						>
-							{categoriesMap[category].map((product) => (
-								<Box
-									sx={{
-										height: `auto`,
-										minWidth: {
-											xs: 150,
-											sm: 200,
-											md: 250,
-										},
-									}}
-								>
+							{categoriesMap[category].map((product, index) => (
+								<Grid item xs={12} sm={6} md={4} lg={3} key={index}>
 									<ProductCard product={product} />
-								</Box>
+								</Grid>
 							))}
 						</Box>
-					</>
+					</Grid>
 				))}
 		</Box>
 	);
