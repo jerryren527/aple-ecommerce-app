@@ -15,20 +15,3 @@ const Shop = () => {
 };
 
 export default Shop;
-
-// <Box
-// 	sx={{
-// 		padding: `20px`,
-// 	}}
-// >
-// 	<Typography variant="h3" component="h2">
-// 		SHOP PAGE
-// 	</Typography>
-// 	{categoriesMap &&
-// 		Object.keys(categoriesMap).map((category) => (
-// 			<>
-// 				<Category category={category} categoryProducts={categoriesMap[category]} />
-// 			</>
-// 		))}
-// 	``
-// </Box>

@@ -114,6 +114,4 @@ const Navigation = () => {
 	);
 };
 
-// to="/" onClick={signOutUser}
-// the onClick handler on user__button will set it as the anchor element of the menu
 export default Navigation;

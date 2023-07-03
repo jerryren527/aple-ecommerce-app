@@ -14,8 +14,6 @@ import { CartProvider } from "./contexts/cart.context";
 let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
-// CssBaseline for a global reset, for a consistent look.
-// enableColorScheme allows for switching between 'light' and 'dark' modes of naative compoennts, like scrollbar.
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>

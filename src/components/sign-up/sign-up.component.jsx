@@ -41,12 +41,10 @@ const SignUp = () => {
 			return;
 		}
 
-		// check if user is authenticated
 		try {
-			// Create the user by calling firebase's createAuthUserWithEmailAndPassword()
 			const { user } = await createAuthUserWithEmailAndPassword(email, password);
 			console.log(user);
-			// Pass an additional object as prop that contains the displayName entered by the user. displayName is not provided in the 'user' object returned by createAuthUserWithEmailAndPassword, so we must provide it outselves if we want to use it.
+
 			await createUserDocumentFromAuth(user, { displayName });
 			setFormFields(defaultFormFields); // reset form Fields
 			navigate("/");
